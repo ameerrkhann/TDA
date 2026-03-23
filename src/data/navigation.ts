@@ -16,7 +16,6 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: "Brands We Service", href: "/brands-we-service" },
-  { label: "Service Areas", href: "/service-areas" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -31,7 +30,6 @@ export const footerNav = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Brands We Service", href: "/brands-we-service" },
-    { label: "Service Areas", href: "/service-areas" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],

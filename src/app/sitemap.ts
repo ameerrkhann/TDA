@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/appliance-installation",
     "/parts",
     "/brands-we-service",
-    "/service-areas",
     "/about",
     "/faq",
     "/contact",
