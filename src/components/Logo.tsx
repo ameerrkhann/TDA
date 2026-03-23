@@ -5,13 +5,13 @@ import Link from "next/link";
 export default function Logo({ className = "" }: { className?: string }) {
   return (
     <Link href="/" className={`flex items-center ${className}`}>
-      <div className="relative h-12 w-44 sm:h-14 sm:w-52 overflow-hidden">
+      <div className="relative h-16 w-56 sm:h-20 sm:w-72 overflow-hidden">
         <Image
           src="/logo-transparent.png"
           alt="Top Digital Appliances"
           fill
           priority
-          className="object-contain scale-[1.8]"
+          className="object-contain scale-[2.2]"
         />
       </div>
     </Link>
