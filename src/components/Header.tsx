@@ -1,12 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import { mainNav } from "@/data/navigation";
 import { siteConfig } from "@/data/site";
+import { useHeroVisible } from "@/hooks/useHeroVisible";
 
 export default function Header() {
+  const heroVisible = useHeroVisible();
+
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-white/95 backdrop-blur-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-30 border-b border-border bg-white/95 backdrop-blur-sm transition-all duration-500 ease-in-out ${
+        heroVisible
+          ? "-translate-y-full opacity-0 pointer-events-none"
+          : "translate-y-0 opacity-100"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Logo />
 

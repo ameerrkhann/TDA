@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site";
 type CTABannerProps = {
   headline?: string;
   body?: string;
+  variant?: "blue" | "white";
 };
 
 export default function CTABanner({

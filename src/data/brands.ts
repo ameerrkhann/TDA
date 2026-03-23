@@ -1,4 +1,11 @@
-export const brands = [
+export interface BrandEntry {
+  name: string;
+  slug: string;
+  logo: string;
+  alt: string;
+}
+
+export const brandNames = [
   "Amana",
   "American Range",
   "Asko",
@@ -66,4 +73,60 @@ export const brands = [
   "ZLine",
 ] as const;
 
-export type Brand = (typeof brands)[number];
+export type Brand = (typeof brandNames)[number];
+
+function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+// Brands whose logos were downloaded as PNG (all others are SVG)
+const pngBrands = new Set([
+  "american-range",
+  "asko",
+  "avanti",
+  "bertazzoni",
+  "bosch",
+  "broan",
+  "cafe",
+  "dacor",
+  "danby",
+  "dcs",
+  "faber",
+  "fivestar",
+  "fulgor-milano",
+  "galanz",
+  "hot-point",
+  "ilve",
+  "kitchenaid",
+  "marvel",
+  "maytag",
+  "midea",
+  "monogram",
+  "nxr",
+  "premier",
+  "sks",
+  "speed-queen",
+  "summit",
+  "tappan",
+  "thermador",
+  "thor",
+  "u-line",
+  "verona",
+  "viking",
+  "xo",
+  "zline",
+]);
+
+export const brands: BrandEntry[] = brandNames.map((name) => {
+  const slug = toSlug(name);
+  const ext = pngBrands.has(slug) ? "png" : "svg";
+  return {
+    name,
+    slug,
+    logo: `/brands/${slug}.${ext}`,
+    alt: `${name} logo`,
+  };
+});

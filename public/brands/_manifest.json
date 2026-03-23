@@ -1,0 +1,327 @@
+{
+  "amana": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Amana"
+  },
+  "american-range": {
+    "status": "ok",
+    "ext": "png",
+    "name": "American Range"
+  },
+  "asko": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Asko"
+  },
+  "avanti": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Avanti"
+  },
+  "beko": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Beko"
+  },
+  "bertazzoni": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Bertazzoni"
+  },
+  "best": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Best"
+  },
+  "blomberg": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Blomberg"
+  },
+  "blue-star": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Blue Star"
+  },
+  "bosch": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Bosch"
+  },
+  "broan": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Broan"
+  },
+  "cafe": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Cafe"
+  },
+  "capital": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Capital"
+  },
+  "cove": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Cove"
+  },
+  "dacor": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Dacor"
+  },
+  "danby": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Danby"
+  },
+  "dcs": {
+    "status": "ok",
+    "ext": "png",
+    "name": "DCS"
+  },
+  "electrolux": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Electrolux"
+  },
+  "faber": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Faber"
+  },
+  "fisher-and-paykel": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Fisher and Paykel"
+  },
+  "fivestar": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Fivestar"
+  },
+  "forno": {
+    "status": "failed",
+    "ext": null,
+    "name": "Forno"
+  },
+  "frigidaire": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Frigidaire"
+  },
+  "fulgor-milano": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Fulgor Milano"
+  },
+  "gaggenau": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Gaggenau"
+  },
+  "galanz": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Galanz"
+  },
+  "ge": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "GE"
+  },
+  "haier": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Haier"
+  },
+  "hot-point": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Hot Point"
+  },
+  "ilve": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Ilve"
+  },
+  "jenn-air": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Jenn-Air"
+  },
+  "kitchenaid": {
+    "status": "ok",
+    "ext": "png",
+    "name": "KitchenAid"
+  },
+  "koolmore": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Koolmore"
+  },
+  "kucht": {
+    "status": "failed",
+    "ext": null,
+    "name": "Kucht"
+  },
+  "la-cornue": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "La Cornue"
+  },
+  "lg": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "LG"
+  },
+  "liebherr": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Liebherr"
+  },
+  "marvel": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Marvel"
+  },
+  "maytag": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Maytag"
+  },
+  "midea": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Midea"
+  },
+  "miele": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Miele"
+  },
+  "monogram": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Monogram"
+  },
+  "nxr": {
+    "status": "ok",
+    "ext": "png",
+    "name": "NXR"
+  },
+  "perlick": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Perlick"
+  },
+  "premier": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Premier"
+  },
+  "samsung": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Samsung"
+  },
+  "sapphire": {
+    "status": "skipped",
+    "ext": null,
+    "name": "Sapphire"
+  },
+  "sharp": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Sharp"
+  },
+  "sks": {
+    "status": "ok",
+    "ext": "png",
+    "name": "SKS"
+  },
+  "smeg": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Smeg"
+  },
+  "speed-queen": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Speed Queen"
+  },
+  "sub-zero": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Sub-Zero"
+  },
+  "summit": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Summit"
+  },
+  "tappan": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Tappan"
+  },
+  "thermador": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Thermador"
+  },
+  "thor": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Thor"
+  },
+  "u-line": {
+    "status": "ok",
+    "ext": "png",
+    "name": "U-Line"
+  },
+  "verona": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Verona"
+  },
+  "viking": {
+    "status": "ok",
+    "ext": "png",
+    "name": "Viking"
+  },
+  "weber": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Weber"
+  },
+  "whirlpool": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Whirlpool"
+  },
+  "wolf": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Wolf"
+  },
+  "xo": {
+    "status": "ok",
+    "ext": "png",
+    "name": "XO"
+  },
+  "zephyr": {
+    "status": "ok",
+    "ext": "svg",
+    "name": "Zephyr"
+  },
+  "zline": {
+    "status": "ok",
+    "ext": "png",
+    "name": "ZLine"
+  }
+}
