@@ -7,6 +7,27 @@ type ServiceCardProps = {
   icon: string;
 };
 
+const cardStyles: Record<string, { border: string; iconBg: string; iconColor: string; accent: string }> = {
+  wrench: {
+    border: "hover:border-brand-red/40",
+    iconBg: "bg-brand-red/10 group-hover:bg-brand-red/15",
+    iconColor: "text-brand-red",
+    accent: "text-brand-red",
+  },
+  plug: {
+    border: "hover:border-brand-green/40",
+    iconBg: "bg-brand-green/10 group-hover:bg-brand-green/15",
+    iconColor: "text-brand-green",
+    accent: "text-brand-green",
+  },
+  cog: {
+    border: "hover:border-brand-blue/40",
+    iconBg: "bg-brand-blue/10 group-hover:bg-brand-blue/15",
+    iconColor: "text-brand-blue",
+    accent: "text-brand-blue",
+  },
+};
+
 const icons: Record<string, React.ReactNode> = {
   wrench: (
     <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -32,19 +53,26 @@ export default function ServiceCard({
   href,
   icon,
 }: ServiceCardProps) {
+  const style = cardStyles[icon] || cardStyles.wrench;
+
   return (
     <Link
       href={href}
-      className="group block rounded-xl border border-border bg-white p-8 transition-all hover:border-brand-blue/30 hover:shadow-lg"
+      className={`group relative block overflow-hidden rounded-xl border border-border bg-white p-8 transition-all hover:shadow-lg ${style.border}`}
     >
-      <div className="mb-4 inline-flex rounded-lg bg-brand-blue/10 p-3 text-brand-blue">
+      {/* Colored top accent bar */}
+      <div className={`absolute top-0 left-0 right-0 h-1 ${
+        icon === "wrench" ? "bg-brand-red" : icon === "plug" ? "bg-brand-green" : "bg-brand-blue"
+      }`} />
+
+      <div className={`mb-4 inline-flex rounded-xl p-3.5 transition-colors ${style.iconBg} ${style.iconColor}`}>
         {icons[icon] || icons.wrench}
       </div>
       <h3 className="text-xl font-bold text-charcoal group-hover:text-brand-blue transition-colors">
         {title}
       </h3>
       <p className="mt-2 text-muted leading-relaxed">{description}</p>
-      <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-blue">
+      <span className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold ${style.accent}`}>
         Learn More
         <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
