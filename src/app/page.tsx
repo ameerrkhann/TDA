@@ -46,7 +46,7 @@ export default function Home() {
             title="Appliances We Repair"
             subtitle="We work on all major household appliance types."
           />
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="flex flex-wrap justify-center gap-4">
             {repairServices.map((service) => (
               <ApplianceCategoryCard
                 key={service.slug}
