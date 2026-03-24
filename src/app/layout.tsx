@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { BackgroundPaths } from "@/components/ui/background-paths";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -32,8 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable} suppressHydrationWarning>
       <body className="font-sans min-h-screen flex flex-col" suppressHydrationWarning>
+        <BackgroundPaths />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 relative z-[1]">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 type CTABannerProps = {
   headline?: string;
@@ -37,19 +39,23 @@ export default function CTABanner({
           {body}
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-          <a
+          <HoverBorderGradient
+            as="a"
             href={siteConfig.phoneHref}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-red px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:bg-red-700 hover:shadow-xl hover:scale-[1.02]"
+            containerClassName="rounded-full"
+            className="flex items-center gap-2 rounded-full bg-brand-red px-8 py-4 text-lg font-bold text-white"
           >
             <PhoneIcon />
             {siteConfig.phone}
-          </a>
-          <Link
+          </HoverBorderGradient>
+          <HoverBorderGradient
+            as={Link}
             href="/contact"
-            className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-bold text-white transition-all hover:bg-white/20 hover:border-white/50 hover:scale-[1.02]"
+            containerClassName="rounded-full"
+            className="flex items-center gap-2 rounded-full bg-charcoal px-8 py-4 text-lg font-bold text-white"
           >
             Book Service
-          </Link>
+          </HoverBorderGradient>
         </div>
       </div>
     </section>

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { useEffect, useRef, useState } from "react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -40,52 +40,6 @@ export default function Hero() {
         {/* ── Gradient overlays for text readability ── */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30" />
-
-        {/* ── White navbar inside hero (lg+ only) ── */}
-        <div className="relative z-20 mx-4 mt-4 sm:mx-6 sm:mt-6 lg:mx-8 lg:mt-8 hidden xl:block">
-          <div className="relative flex items-center justify-center rounded-2xl bg-white/95 backdrop-blur-md px-6 py-6 shadow-lg shadow-black/10 border border-white/80">
-            {/* Logo — positioned left */}
-            <Link href="/" className="absolute left-5 flex-shrink-0">
-              <Image
-                src="/logo transparent.png"
-                alt="Top Digital Appliances"
-                width={180}
-                height={54}
-                priority
-                className="h-[70px] w-auto"
-              />
-            </Link>
-
-            {/* Nav links — centered */}
-            <nav className="flex items-center">
-              {[
-                { label: "Home", href: "/" },
-                { label: "Repair", href: "/appliance-repair" },
-                { label: "Installation", href: "/appliance-installation" },
-                { label: "Parts", href: "/parts" },
-                { label: "Brands", href: "/brands-we-service" },
-                { label: "About", href: "/about" },
-                { label: "FAQ", href: "/faq" },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-lg px-3 py-1.5 text-sm font-semibold text-charcoal transition-colors hover:bg-gray-100 hover:text-brand-blue whitespace-nowrap"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* CTA pill — positioned right */}
-            <Link
-              href="/contact"
-              className="absolute right-5 inline-flex items-center gap-2 rounded-full bg-brand-red px-5 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-red-600 hover:shadow-lg hover:scale-[1.03]"
-            >
-              Easy Online Booking
-            </Link>
-          </div>
-        </div>
 
         {/* ── Hero content ── */}
         <div className="relative z-10 flex items-end sm:items-center min-h-[530px] sm:min-h-[560px] lg:min-h-[75vh]">
@@ -130,12 +84,14 @@ export default function Hero() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <a
+              <HoverBorderGradient
+                as="a"
                 href={siteConfig.phoneHref}
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-red px-7 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg shadow-red-900/30 transition-all duration-300 hover:bg-red-600 hover:shadow-xl hover:scale-[1.02]"
+                containerClassName="rounded-full"
+                className="flex items-center gap-2.5 rounded-full bg-brand-red px-7 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white"
               >
                 <svg
-                  className="h-5 w-5 transition-transform group-hover:rotate-12"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -148,14 +104,16 @@ export default function Hero() {
                   />
                 </svg>
                 {siteConfig.phone}
-              </a>
-              <Link
+              </HoverBorderGradient>
+              <HoverBorderGradient
+                as={Link}
                 href="/contact"
-                className="group inline-flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-7 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white transition-all duration-300 hover:bg-white/20 hover:border-white/50 hover:scale-[1.02]"
+                containerClassName="rounded-full"
+                className="flex items-center gap-2 rounded-full bg-charcoal px-7 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-white"
               >
                 Book Service
                 <svg
-                  className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+                  className="ml-1 h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -163,7 +121,7 @@ export default function Hero() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </Link>
+              </HoverBorderGradient>
             </div>
 
             {/* Trust badges — inline */}

@@ -1,9 +1,86 @@
+export type BrandCategory = "Kitchen" | "Laundry" | "Refrigeration" | "Ventilation";
+
 export interface BrandEntry {
   name: string;
   slug: string;
   logo: string;
   alt: string;
+  category: BrandCategory;
+  featured: boolean;
 }
+
+const brandCategories: Record<string, BrandCategory> = {
+  "Amana": "Kitchen",
+  "American Range": "Kitchen",
+  "Asko": "Laundry",
+  "Avanti": "Refrigeration",
+  "Beko": "Laundry",
+  "Bertazzoni": "Kitchen",
+  "Best": "Ventilation",
+  "Blomberg": "Laundry",
+  "Blue Star": "Kitchen",
+  "Bosch": "Kitchen",
+  "Broan": "Ventilation",
+  "Cafe": "Kitchen",
+  "Capital": "Kitchen",
+  "Cove": "Kitchen",
+  "Dacor": "Kitchen",
+  "Danby": "Refrigeration",
+  "DCS": "Kitchen",
+  "Electrolux": "Laundry",
+  "Faber": "Ventilation",
+  "Fisher and Paykel": "Kitchen",
+  "Fivestar": "Kitchen",
+  "Forno": "Kitchen",
+  "Frigidaire": "Refrigeration",
+  "Fulgor Milano": "Kitchen",
+  "Gaggenau": "Kitchen",
+  "Galanz": "Kitchen",
+  "GE": "Kitchen",
+  "Haier": "Laundry",
+  "Hot Point": "Kitchen",
+  "Ilve": "Kitchen",
+  "Jenn-Air": "Kitchen",
+  "KitchenAid": "Kitchen",
+  "Koolmore": "Refrigeration",
+  "Kucht": "Kitchen",
+  "La Cornue": "Kitchen",
+  "LG": "Laundry",
+  "Liebherr": "Refrigeration",
+  "Marvel": "Refrigeration",
+  "Maytag": "Laundry",
+  "Midea": "Laundry",
+  "Miele": "Kitchen",
+  "Monogram": "Kitchen",
+  "NXR": "Kitchen",
+  "Perlick": "Refrigeration",
+  "Premier": "Kitchen",
+  "Samsung": "Kitchen",
+  "Sapphire": "Kitchen",
+  "Sharp": "Kitchen",
+  "SKS": "Kitchen",
+  "Smeg": "Kitchen",
+  "Speed Queen": "Laundry",
+  "Sub-Zero": "Refrigeration",
+  "Summit": "Refrigeration",
+  "Tappan": "Kitchen",
+  "Thermador": "Kitchen",
+  "Thor": "Kitchen",
+  "U-Line": "Refrigeration",
+  "Verona": "Kitchen",
+  "Viking": "Kitchen",
+  "Weber": "Kitchen",
+  "Whirlpool": "Laundry",
+  "Wolf": "Kitchen",
+  "XO": "Ventilation",
+  "Zephyr": "Ventilation",
+  "ZLine": "Kitchen",
+};
+
+const featuredBrandNames = new Set([
+  "Samsung", "LG", "Whirlpool", "Bosch", "GE", "KitchenAid",
+  "Sub-Zero", "Viking", "Miele", "Thermador", "Wolf", "Frigidaire",
+]);
 
 export const brandNames = [
   "Amana",
@@ -128,5 +205,7 @@ export const brands: BrandEntry[] = brandNames.map((name) => {
     slug,
     logo: `/brands/${slug}.${ext}`,
     alt: `${name} logo`,
+    category: brandCategories[name] || "Kitchen",
+    featured: featuredBrandNames.has(name),
   };
 });
