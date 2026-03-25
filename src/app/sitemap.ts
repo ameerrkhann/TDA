@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { repairServices } from "@/data/services";
 
 const baseUrl = "https://topdigitalappliances.com";
 
@@ -15,20 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
   ];
 
-  const repairPages = repairServices.map((service) => ({
-    url: `${baseUrl}/appliance-repair/${service.slug}`,
+  return staticPages.map((path) => ({
+    url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: path === "" ? 1 : 0.8,
   }));
-
-  return [
-    ...staticPages.map((path) => ({
-      url: `${baseUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.8,
-    })),
-    ...repairPages,
-  ];
 }

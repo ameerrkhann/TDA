@@ -55,16 +55,29 @@ export default function BrandsPageContent() {
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-red/10 blur-[120px]" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-brand-blue/10 blur-[120px]" />
 
-        <div className="relative mx-auto max-w-4xl px-6 py-20 text-center">
+        {/* Logo */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 sm:top-20 lg:top-20 lg:left-12 z-20">
+          <Image
+            src="/logo transparent.png"
+            alt="Top Digital Appliances"
+            width={240}
+            height={80}
+            className="w-[200px] sm:w-[220px] lg:w-[270px] h-auto drop-shadow-lg"
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-4xl px-6 py-20 pt-20 sm:pt-20 text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-5 bg-brand-red/15 text-brand-red border-brand-red/20 px-3 py-1">
-              <Award className="w-3.5 h-3.5 mr-1.5" />
-              Certified Appliance Repair
-            </Badge>
+            <div className="hidden sm:block mb-5">
+              <Badge className="bg-brand-red/15 text-brand-red border-brand-red/20 px-3 py-1">
+                <Award className="w-3.5 h-3.5 mr-1.5" />
+                Certified Appliance Repair
+              </Badge>
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-tight">
               Appliance Brands{" "}
               <span className="text-brand-red">We Service</span>
@@ -99,7 +112,7 @@ export default function BrandsPageContent() {
         >
           {[
             { icon: Award, label: "Brands Serviced", value: "60+", color: "text-brand-red" },
-            { icon: CheckCircle2, label: "Repairs Completed", value: "2K+", color: "text-brand-green" },
+            { icon: CheckCircle2, label: "Repairs Completed", value: "100K+", color: "text-brand-green" },
             { icon: TrendingUp, label: "Satisfaction Rate", value: "98%", color: "text-brand-blue" },
           ].map((stat, i) => (
             <Card

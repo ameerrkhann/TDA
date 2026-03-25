@@ -1,7 +1,9 @@
 export const siteConfig = {
   businessName: "Top Digital Appliances",
-  phone: "718-234-4111",
-  phoneHref: "tel:+17182344111",
+  phone: "718-234-5111",
+  phoneHref: "tel:+17182345111",
+  phoneLandline: "718-234-4111",
+  phoneLandlineHref: "tel:+17182344111",
   email: "info@topdigitalappliances.com",
   emailHref: "mailto:info@topdigitalappliances.com",
   serviceAreaLine:

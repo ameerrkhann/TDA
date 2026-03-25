@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { useEffect, useRef, useState } from "react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -41,13 +42,25 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/30" />
 
+        {/* ── Logo ── */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 sm:top-20 lg:top-20 lg:left-12 z-20">
+          <Image
+            src="/logo transparent.png"
+            alt="Top Digital Appliances"
+            width={240}
+            height={80}
+            className="w-[200px] sm:w-[220px] lg:w-[270px] h-auto drop-shadow-lg"
+            priority
+          />
+        </div>
+
         {/* ── Hero content ── */}
         <div className="relative z-10 flex items-end sm:items-center min-h-[530px] sm:min-h-[560px] lg:min-h-[75vh]">
-          <div className="w-full px-6 pb-10 sm:px-10 sm:pb-14 lg:px-16 lg:pb-16 lg:max-w-[60%]">
+          <div className="w-full px-6 pb-10 sm:px-10 sm:pb-14 lg:px-16 lg:pb-16 lg:max-w-[60%] text-center lg:text-left">
 
             {/* Badge — extra top margin to separate from hero nav */}
             <div
-              className={`inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-white/90 backdrop-blur-sm mb-7 sm:mb-8 lg:mt-6 transition-all duration-700 ${
+              className={`hidden sm:inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-white/90 backdrop-blur-sm mb-7 sm:mb-8 lg:mt-6 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -71,7 +84,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p
-              className={`mt-5 sm:mt-6 max-w-lg text-sm sm:text-base lg:text-lg leading-relaxed text-white/75 transition-all duration-700 delay-300 ${
+              className={`mt-5 sm:mt-6 max-w-lg mx-auto lg:mx-0 text-sm sm:text-base lg:text-lg leading-relaxed text-white/75 transition-all duration-700 delay-300 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -80,7 +93,7 @@ export default function Hero() {
 
             {/* CTA buttons */}
             <div
-              className={`mt-7 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 transition-all duration-700 delay-500 ${
+              className={`mt-7 sm:mt-8 flex flex-col items-center sm:flex-row sm:gap-4 lg:items-start gap-3 transition-all duration-700 delay-500 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -126,7 +139,7 @@ export default function Hero() {
 
             {/* Trust badges — inline */}
             <div
-              className={`mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs sm:text-sm text-white/60 transition-all duration-700 delay-700 ${
+              className={`mt-8 flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 text-xs sm:text-sm text-white/60 transition-all duration-700 delay-700 ${
                 mounted ? "opacity-100" : "opacity-0"
               }`}
             >

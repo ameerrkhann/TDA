@@ -6,12 +6,13 @@ import CTABanner from "@/components/CTABanner";
 import FAQAccordion from "@/components/FAQAccordion";
 import ServiceAreaBlock from "@/components/ServiceAreaBlock";
 import CTAButtons from "@/components/CTAButtons";
+import ScrollReveal from "@/components/ScrollReveal";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Appliance Installation",
   description:
-    "Professional appliance installation for all major kitchen and laundry appliances. Call Top Digital Appliances at 718-234-4111.",
+    "Professional appliance installation for all major kitchen and laundry appliances. Call Top Digital Appliances at 718-234-5111.",
 };
 
 const installationTypes = [
@@ -38,7 +39,7 @@ const installationTypes = [
   },
   {
     name: "Dishwashers",
-    detail: "Plumbing, electrical, mounting",
+    detail: "Basic plumbing, electrical, mounting",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" strokeWidth={1.5} stroke="currentColor">
         <rect x="4" y="2" width="16" height="20" rx="2" />
@@ -134,15 +135,6 @@ const installFAQs = [
 
 const whyUs = [
   {
-    title: "Gas & Electric Certified",
-    description: "Safe, code-compliant connections every time.",
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-      </svg>
-    ),
-  },
-  {
     title: "All Brands Welcome",
     description: "From budget to premium — we install them all.",
     icon: (
@@ -178,7 +170,7 @@ export default function ApplianceInstallationPage() {
       <section className="relative min-h-[520px] lg:min-h-[600px] flex items-end overflow-hidden">
         {/* Background image */}
         <Image
-          src="/install.jpg"
+          src="/pexels-anete-lusina-4792522.jpg"
           alt="Professional appliance installation"
           fill
           className="object-cover"
@@ -188,10 +180,22 @@ export default function ApplianceInstallationPage() {
         {/* Dark gradient overlay — heavier at bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/20" />
 
+        {/* Logo */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 sm:top-20 lg:top-20 lg:left-12 z-20">
+          <Image
+            src="/logo transparent.png"
+            alt="Top Digital Appliances"
+            width={240}
+            height={80}
+            className="w-[200px] sm:w-[220px] lg:w-[270px] h-auto drop-shadow-lg"
+            priority
+          />
+        </div>
+
         <div className="relative z-10 w-full pb-16 pt-32 px-6 lg:pb-20">
           <div className="mx-auto max-w-6xl">
-            <div className="max-w-2xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-blue/40 bg-brand-blue/20 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+            <div className="max-w-2xl text-center lg:text-left">
+              <div className="mb-4 hidden sm:inline-flex items-center gap-2 rounded-full border border-brand-blue/40 bg-brand-blue/20 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1a2.25 2.25 0 010-3.18l.71-.71a2.25 2.25 0 013.18 0l.71.71a2.25 2.25 0 010 3.18l-5.1 5.1M3.75 21h16.5" />
                 </svg>
@@ -201,10 +205,10 @@ export default function ApplianceInstallationPage() {
                 New Appliance?{" "}
                 <span className="text-brand-blue">We&apos;ll Install It.</span>
               </h1>
-              <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-xl">
+              <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 From unboxing to running — we handle gas, electric, and water connections so your new appliance is set up safely and correctly.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
                 <CTAButtons variant="blue" bookLabel="Schedule Installation" />
               </div>
             </div>
@@ -218,6 +222,7 @@ export default function ApplianceInstallationPage() {
       {/* ── What We Install — full-width card grid ── */}
       <section className="py-16 px-6 lg:py-24">
         <div className="mx-auto max-w-6xl">
+          <ScrollReveal>
           <div className="text-center mb-12">
             <div className="mb-4 inline-flex h-1 w-12 rounded-full bg-brand-blue" />
             <h2 className="text-3xl font-bold text-charcoal sm:text-4xl">
@@ -227,9 +232,11 @@ export default function ApplianceInstallationPage() {
               We handle all major household appliance types — kitchen and laundry.
             </p>
           </div>
+          </ScrollReveal>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {installationTypes.map((type) => (
+            {installationTypes.map((type, i) => (
+              <ScrollReveal key={type.name} delay={i * 0.08}>
               <div
                 key={type.name}
                 className="group flex items-start gap-4 rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-brand-blue/20"
@@ -242,6 +249,7 @@ export default function ApplianceInstallationPage() {
                   <p className="mt-1 text-sm text-muted">{type.detail}</p>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -253,8 +261,8 @@ export default function ApplianceInstallationPage() {
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-blue/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-brand-green/8 rounded-full blur-[80px]" />
 
-        <div className="relative mx-auto max-w-6xl">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mx-auto max-w-5xl">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-start gap-8 lg:gap-16">
             {whyUs.map((item) => (
               <div key={item.title} className="flex items-start gap-4">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-brand-blue">
@@ -273,6 +281,7 @@ export default function ApplianceInstallationPage() {
       {/* ── Installation Process — vertical timeline ── */}
       <section className="py-16 px-6 lg:py-24 bg-surface-alt">
         <div className="mx-auto max-w-3xl">
+          <ScrollReveal>
           <div className="text-center mb-14">
             <div className="mb-4 inline-flex h-1 w-12 rounded-full bg-brand-green" />
             <h2 className="text-3xl font-bold text-charcoal sm:text-4xl">
@@ -282,6 +291,7 @@ export default function ApplianceInstallationPage() {
               Three simple steps from scheduling to a fully operational appliance.
             </p>
           </div>
+          </ScrollReveal>
 
           <div className="relative">
             {/* Vertical timeline line */}
@@ -330,10 +340,11 @@ export default function ApplianceInstallationPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             {/* Left: Image */}
+            <ScrollReveal direction="left">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/3]">
                 <Image
-                  src="/install.jpg"
+                  src="/pexels-anete-lusina-4792522.jpg"
                   alt="Technician installing an appliance"
                   fill
                   className="object-cover"
@@ -343,8 +354,10 @@ export default function ApplianceInstallationPage() {
               {/* Accent corner */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-brand-green to-brand-red" />
             </div>
+            </ScrollReveal>
 
             {/* Right: Content */}
+            <ScrollReveal direction="right">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue mb-3">
                 What&apos;s Included
@@ -395,6 +408,7 @@ export default function ApplianceInstallationPage() {
                 </Link>
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

@@ -5,12 +5,13 @@ import BrandsCarousel from "@/components/BrandsCarousel";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTABanner from "@/components/CTABanner";
 import ServiceAreaBlock from "@/components/ServiceAreaBlock";
+import ScrollReveal from "@/components/ScrollReveal";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Parts & Support",
   description:
-    "Top Digital Appliances provides parts support for all major appliance brands. Call 718-234-4111 before ordering to confirm compatibility.",
+    "Top Digital Appliances provides parts support for all major appliance brands. Call 718-234-5111 before ordering to confirm compatibility.",
 };
 
 const commonParts = [
@@ -93,32 +94,32 @@ const applianceCategories = [
   {
     name: "Refrigerator Parts",
     examples: "Compressors, thermostats, door gaskets, ice maker assemblies, evaporator fans",
-    href: "/appliance-repair/refrigerator-repair",
+    href: "/appliance-repair",
   },
   {
     name: "Washer Parts",
     examples: "Drain pumps, lid switches, water inlet valves, drive belts, shock absorbers",
-    href: "/appliance-repair/washer-repair",
+    href: "/appliance-repair",
   },
   {
     name: "Dryer Parts",
     examples: "Heating elements, drum rollers, thermal fuses, belts, igniters",
-    href: "/appliance-repair/dryer-repair",
+    href: "/appliance-repair",
   },
   {
     name: "Dishwasher Parts",
     examples: "Spray arms, door latches, wash motors, drain pumps, float switches",
-    href: "/appliance-repair/dishwasher-repair",
+    href: "/appliance-repair",
   },
   {
     name: "Oven & Range Parts",
     examples: "Bake elements, igniters, thermostats, control boards, door hinges",
-    href: "/appliance-repair/oven-repair",
+    href: "/appliance-repair",
   },
   {
     name: "Microwave Parts",
     examples: "Magnetrons, door switches, turntable motors, diodes, capacitors",
-    href: "/appliance-repair/microwave-repair",
+    href: "/appliance-repair",
   },
 ];
 
@@ -195,8 +196,8 @@ export default function PartsPage() {
       {/* ── Hero — photo background with left text ── */}
       <section className="relative min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden">
         <Image
-          src="/install.jpg"
-          alt="Appliance technician working on parts"
+          src="/photo-1504148455328-c376907d081c.jpeg"
+          alt="Tools and equipment for appliance repair"
           fill
           className="object-cover"
           priority
@@ -204,10 +205,22 @@ export default function PartsPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/80 to-charcoal/30" />
 
-        <div className="relative z-10 w-full px-6 py-24 lg:py-32">
+        {/* Logo */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 sm:top-20 lg:top-20 lg:left-12 z-20">
+          <Image
+            src="/logo transparent.png"
+            alt="Top Digital Appliances"
+            width={240}
+            height={80}
+            className="w-[200px] sm:w-[220px] lg:w-[270px] h-auto drop-shadow-lg"
+            priority
+          />
+        </div>
+
+        <div className="relative z-10 w-full px-6 py-24 lg:py-32 pt-28 sm:pt-28 lg:pt-32">
           <div className="mx-auto max-w-6xl">
-            <div className="max-w-xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-green/40 bg-brand-green/20 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+            <div className="max-w-xl text-center lg:text-left">
+              <div className="mb-4 hidden sm:inline-flex items-center gap-2 rounded-full border border-brand-green/40 bg-brand-green/20 px-4 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -217,10 +230,10 @@ export default function PartsPage() {
               <h1 className="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
                 The Right <span className="text-brand-green">Parts</span> for Every Repair
               </h1>
-              <p className="mt-5 text-lg text-white/75 leading-relaxed">
+              <p className="mt-5 text-lg text-white/75 leading-relaxed mx-auto lg:mx-0">
                 We source genuine replacement components from trusted suppliers for all major appliance brands. Call us before ordering — we&apos;ll make sure you get the exact part you need.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
                 <a
                   href={siteConfig.phoneHref}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-green-900/40 transition-all hover:bg-green-600 hover:scale-[1.02]"
@@ -258,10 +271,10 @@ export default function PartsPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {commonParts.map((part) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {commonParts.map((part, i) => (
+              <ScrollReveal key={part.name} delay={i * 0.06}>
               <div
-                key={part.name}
                 className="group rounded-2xl border border-border bg-white p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-brand-red/20"
               >
                 <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-red/5 text-brand-red transition-colors group-hover:bg-brand-red group-hover:text-white">
@@ -270,6 +283,7 @@ export default function PartsPage() {
                 <h3 className="text-base font-bold text-charcoal">{part.name}</h3>
                 <p className="mt-1 text-sm text-muted">{part.description}</p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -288,7 +302,7 @@ export default function PartsPage() {
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {applianceCategories.map((cat, i) => {
               const colors = [
                 { border: "border-l-brand-red", accent: "text-brand-red", bg: "bg-brand-red/5" },
@@ -336,7 +350,7 @@ export default function PartsPage() {
 
         <div className="relative mx-auto max-w-6xl">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
-            <div>
+            <div className="text-center lg:text-left">
               <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/15 px-4 py-1.5 text-xs font-semibold text-amber-300 backdrop-blur-sm">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
@@ -349,7 +363,7 @@ export default function PartsPage() {
               <p className="mt-4 text-white/70 leading-relaxed">
                 Ordering the wrong part is the #1 mistake homeowners make. Many components look identical but are model-specific. A quick call saves you time, money, and the hassle of returns.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
                 <a
                   href={siteConfig.phoneHref}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-green-900/30 transition-all hover:bg-green-600 hover:scale-[1.02]"
@@ -394,7 +408,8 @@ export default function PartsPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             {/* Left: Content */}
-            <div>
+            <ScrollReveal direction="left">
+            <div className="text-center lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue mb-3">
                 How It Works
               </p>
@@ -438,13 +453,15 @@ export default function PartsPage() {
                 ))}
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right: Image */}
+            <ScrollReveal direction="right">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/3]">
                 <Image
-                  src="/dryer-drum-macro-stainless-texture-warm-reflections.jpg"
-                  alt="Inside of an appliance drum showing internal parts"
+                  src="/photo-1504148455328-c376907d081c.jpeg"
+                  alt="Tools and parts for appliance repair"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -452,6 +469,7 @@ export default function PartsPage() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-red via-brand-blue to-brand-green" />
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

@@ -4,11 +4,12 @@ import BrandsCarousel from "@/components/BrandsCarousel";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
-import ApplianceCategoryCard from "@/components/ApplianceCategoryCard";
+import ApplianceRepairExplorer from "@/components/ApplianceRepairExplorer";
 import ServiceAreaBlock from "@/components/ServiceAreaBlock";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTABanner from "@/components/CTABanner";
-import { parentServices, repairServices } from "@/data/services";
+import ScrollReveal from "@/components/ScrollReveal";
+import { parentServices } from "@/data/services";
 import { faqs } from "@/data/faqs";
 import { siteConfig } from "@/data/site";
 
@@ -22,6 +23,7 @@ export default function Home() {
 
       {/* ── Common Problems Intro Section ── */}
       <section className="py-16 px-6 lg:py-20">
+        <ScrollReveal>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-brand-red mb-4">
             What We Fix
@@ -34,6 +36,7 @@ export default function Home() {
             From refrigerators that won&apos;t cool to dryers that won&apos;t heat, our certified technicians diagnose and fix issues fast — so your home runs smoothly again.
           </p>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Services Overview */}
@@ -45,14 +48,15 @@ export default function Home() {
             accentColor="red"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {parentServices.map((service) => (
+            {parentServices.map((service, i) => (
+              <ScrollReveal key={service.slug} delay={i * 0.1}>
               <ServiceCard
-                key={service.slug}
                 title={service.title}
                 description={service.shortDescription}
                 href={service.href}
                 icon={service.icon}
               />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -60,23 +64,15 @@ export default function Home() {
 
       <WhyChooseUs />
 
-      {/* Appliance Categories */}
+      {/* Appliance Categories + Testimonials */}
       <section className="bg-surface-alt py-16 px-6 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             title="Appliances We Repair"
-            subtitle="We work on all major household appliance types."
+            subtitle="Click any appliance to see repair details, common issues, and brand support."
             accentColor="blue"
           />
-          <div className="flex flex-wrap justify-center gap-4">
-            {repairServices.map((service) => (
-              <ApplianceCategoryCard
-                key={service.slug}
-                applianceName={service.applianceName}
-                slug={service.slug}
-              />
-            ))}
-          </div>
+          <ApplianceRepairExplorer />
         </div>
       </section>
 
@@ -85,6 +81,7 @@ export default function Home() {
       {/* About Preview */}
       <section className="py-16 px-6 lg:py-24">
         <div className="mx-auto max-w-4xl">
+          <ScrollReveal>
           <div className="rounded-2xl border border-border bg-white p-8 sm:p-12 relative overflow-hidden">
             {/* Colored corner accent */}
             <div className="absolute top-0 right-0 w-32 h-32">
@@ -113,6 +110,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

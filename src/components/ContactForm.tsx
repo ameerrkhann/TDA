@@ -6,11 +6,11 @@ type FormData = {
   name: string;
   phone: string;
   email: string;
+  address: string;
   applianceType: string;
   brand: string;
   modelNumber: string;
   cityZip: string;
-  preferredTime: string;
   message: string;
 };
 
@@ -31,11 +31,11 @@ const initialForm: FormData = {
   name: "",
   phone: "",
   email: "",
+  address: "",
   applianceType: "",
   brand: "",
   modelNumber: "",
   cityZip: "",
-  preferredTime: "",
   message: "",
 };
 
@@ -73,10 +73,10 @@ export default function ContactForm() {
           We received your request and will get back to you as soon as possible.
           If your matter is urgent, please call us directly at{" "}
           <a
-            href="tel:+17182344111"
+            href="tel:+17182345111"
             className="font-semibold text-brand-blue hover:underline"
           >
-            718-234-4111
+            718-234-5111
           </a>
           .
         </p>
@@ -149,6 +149,21 @@ export default function ContactForm() {
         />
       </div>
 
+      <div>
+        <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-charcoal">
+          Address
+        </label>
+        <input
+          id="address"
+          name="address"
+          type="text"
+          value={form.address}
+          onChange={handleChange}
+          className={inputClass}
+          placeholder="Your street address"
+        />
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="applianceType" className="mb-1.5 block text-sm font-medium text-charcoal">
@@ -214,21 +229,6 @@ export default function ContactForm() {
             placeholder="Your city or ZIP"
           />
         </div>
-      </div>
-
-      <div>
-        <label htmlFor="preferredTime" className="mb-1.5 block text-sm font-medium text-charcoal">
-          Preferred Appointment Time
-        </label>
-        <input
-          id="preferredTime"
-          name="preferredTime"
-          type="text"
-          value={form.preferredTime}
-          onChange={handleChange}
-          className={inputClass}
-          placeholder="e.g., Weekday mornings, Saturday afternoon"
-        />
       </div>
 
       <div>

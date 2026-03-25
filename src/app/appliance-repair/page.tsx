@@ -8,20 +8,21 @@ import ServiceAreaBlock from "@/components/ServiceAreaBlock";
 import SectionHeading from "@/components/SectionHeading";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTAButtons from "@/components/CTAButtons";
+import ScrollReveal from "@/components/ScrollReveal";
 import { repairServices } from "@/data/services";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Appliance Repair",
   description:
-    "Professional appliance repair for refrigerators, freezers, washers, dryers, dishwashers, ovens, stoves, ranges, and microwaves. Call 718-234-4111.",
+    "Professional appliance repair for refrigerators, freezers, washers, dryers, dishwashers, ovens, stoves, ranges, and microwaves. Call 718-234-5111.",
 };
 
 const repairFAQs = [
   {
     question: "How quickly can you get a technician to my home?",
     answer:
-      "We offer same-day and next-day service appointments in most cases. Call us at 718-234-4111 and we'll find the earliest available time that works for you.",
+      "We offer same-day and next-day service appointments in most cases. Call us at 718-234-5111 and we'll find the earliest available time that works for you.",
   },
   {
     question: "Do you provide a warranty on repairs?",
@@ -41,7 +42,7 @@ const repairFAQs = [
   {
     question: "What should I do if my appliance stops working?",
     answer:
-      "First, check that the appliance is plugged in and the circuit breaker hasn't tripped. If the issue persists, call us at 718-234-4111 — we'll help you troubleshoot over the phone and schedule a repair if needed.",
+      "First, check that the appliance is plugged in and the circuit breaker hasn't tripped. If the issue persists, call us at 718-234-5111 — we'll help you troubleshoot over the phone and schedule a repair if needed.",
   },
 ];
 
@@ -194,11 +195,23 @@ export default function ApplianceRepairPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-24 lg:py-32">
+        {/* Logo */}
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 sm:top-20 lg:top-20 lg:left-12 z-20">
+          <Image
+            src="/logo transparent.png"
+            alt="Top Digital Appliances"
+            width={240}
+            height={80}
+            className="w-[200px] sm:w-[220px] lg:w-[270px] h-auto drop-shadow-lg"
+            priority
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-6xl px-6 py-24 lg:py-32 pt-28 sm:pt-28 lg:pt-32">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Left: Text content */}
-            <div>
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm">
+            <div className="text-center lg:text-left">
+              <div className="mb-5 hidden sm:inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm">
                 <svg className="h-3.5 w-3.5 text-brand-green" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                 </svg>
@@ -209,10 +222,10 @@ export default function ApplianceRepairPage() {
                 <span className="text-brand-red">Appliance</span>{" "}
                 Repair
               </h1>
-              <p className="mt-5 text-lg text-white/70 leading-relaxed max-w-lg">
+              <p className="mt-5 text-lg text-white/70 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 We repair all major household appliances across every leading brand. Whether it&apos;s a kitchen appliance or laundry equipment, our technicians diagnose the issue and fix it right.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:items-start">
                 <CTAButtons bookLabel="Book Online" />
               </div>
             </div>
@@ -227,8 +240,8 @@ export default function ApplianceRepairPage() {
                 {/* Image */}
                 <div className="absolute inset-5 rounded-full overflow-hidden">
                   <Image
-                    src="/washer-drum.jpg"
-                    alt="Inside of a washing machine drum"
+                    src="/photo-1581092918056-0c4c3acd3789.jpeg"
+                    alt="Technician repairing a washing machine"
                     fill
                     className="object-cover"
                     sizes="340px"
@@ -286,32 +299,23 @@ export default function ApplianceRepairPage() {
             {repairServices.map((service, i) => {
               const accent = cardAccents[i % cardAccents.length];
               return (
-                <Link
-                  key={service.slug}
-                  href={`/appliance-repair/${service.slug}`}
-                  className={`group relative flex items-center gap-5 rounded-xl border border-border border-l-4 ${accent.border} bg-white p-5 ring-1 ring-transparent transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 ${accent.bg} ${accent.ring}`}
+                <ScrollReveal key={service.slug} delay={i * 0.06}>
+                <div
+                  className={`group relative flex items-center gap-5 rounded-xl border border-border border-l-4 ${accent.border} bg-white p-5 ring-1 ring-transparent transition-all duration-300 ${accent.bg}`}
                 >
                   <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-surface-alt ${accent.text} transition-colors`}>
                     <ApplianceIcon slug={service.slug} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-bold text-charcoal group-hover:text-brand-blue transition-colors">
+                    <h3 className="text-lg font-bold text-charcoal">
                       {service.title}
                     </h3>
                     <p className="mt-0.5 text-sm text-muted line-clamp-2">
                       {service.commonIssues[0]}, {service.commonIssues[1]?.toLowerCase()}, and more.
                     </p>
                   </div>
-                  <svg
-                    className="h-5 w-5 shrink-0 text-muted/40 transition-all group-hover:text-brand-blue group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </Link>
+                </div>
+                </ScrollReveal>
               );
             })}
           </div>
@@ -323,7 +327,8 @@ export default function ApplianceRepairPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             {/* Left: heading + description */}
-            <div>
+            <ScrollReveal direction="left">
+            <div className="text-center lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-red mb-3">
                 Symptoms We Solve
               </p>
@@ -334,7 +339,7 @@ export default function ApplianceRepairPage() {
               <p className="mt-4 text-muted leading-relaxed">
                 These are some of the most frequent issues we see across all appliance types. If you&apos;re experiencing any of them, give us a call — we&apos;ll diagnose it fast.
               </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row lg:items-start">
                 <a
                   href={siteConfig.phoneHref}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-red px-6 py-3 text-sm font-bold text-white shadow-lg shadow-red-900/20 transition-all hover:bg-red-600 hover:scale-[1.02]"
@@ -352,8 +357,10 @@ export default function ApplianceRepairPage() {
                 </Link>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right: problem list */}
+            <ScrollReveal direction="right">
             <div className="space-y-3">
               {commonProblems.map((item) => (
                 <div
@@ -367,6 +374,7 @@ export default function ApplianceRepairPage() {
                 </div>
               ))}
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -381,9 +389,9 @@ export default function ApplianceRepairPage() {
           />
 
           <div className="grid gap-6 sm:grid-cols-3">
-            {testimonials.map((item) => (
+            {testimonials.map((item, i) => (
+              <ScrollReveal key={item.name} delay={i * 0.1}>
               <div
-                key={item.name}
                 className="relative rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:shadow-md"
               >
                 {/* Decorative quotation mark */}
@@ -409,6 +417,7 @@ export default function ApplianceRepairPage() {
                   </div>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -507,9 +516,9 @@ export default function ApplianceRepairPage() {
           />
 
           <div className="grid gap-6 sm:grid-cols-3">
-            {guarantees.map((item) => (
+            {guarantees.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.1}>
               <div
-                key={item.title}
                 className={`rounded-2xl border border-border bg-white p-8 text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1`}
               >
                 <div className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl ${item.bg} ${item.color}`}>
@@ -518,6 +527,7 @@ export default function ApplianceRepairPage() {
                 <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted leading-relaxed">{item.description}</p>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

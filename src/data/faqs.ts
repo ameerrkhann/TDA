@@ -7,7 +7,7 @@ export const faqs: FAQ[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "We service the Greater Hudson Valley area and beyond. If you're unsure whether we cover your location, please give us a call at 718-234-4111 and we'll be happy to let you know.",
+      "We service the Greater Hudson Valley area and beyond. If you're unsure whether we cover your location, please give us a call at 718-234-5111 and we'll be happy to let you know.",
   },
   {
     question: "What types of appliances do you repair?",
@@ -32,7 +32,7 @@ export const faqs: FAQ[] = [
   {
     question: "How do I schedule a service appointment?",
     answer:
-      "You can call us directly at 718-234-4111 or fill out the contact form on our website. We'll get back to you promptly to confirm your appointment.",
+      "You can call us directly at 718-234-5111 or fill out the contact form on our website. We'll get back to you promptly to confirm your appointment.",
   },
   {
     question: "Do you service both residential and commercial appliances?",
@@ -52,6 +52,6 @@ export const faqs: FAQ[] = [
   {
     question: "Do you offer emergency or weekend service?",
     answer:
-      "Please call us at 718-234-4111 to discuss your situation. We do our best to accommodate urgent requests and flexible scheduling when possible.",
+      "Please call us at 718-234-5111 to discuss your situation. We do our best to accommodate urgent requests and flexible scheduling when possible.",
   },
 ];

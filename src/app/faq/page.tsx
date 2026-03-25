@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTABanner from "@/components/CTABanner";
+import ScrollReveal from "@/components/ScrollReveal";
 import { faqs } from "@/data/faqs";
 import { siteConfig } from "@/data/site";
 
@@ -18,16 +19,16 @@ export default function FAQPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             {/* Left: Heading + support CTA */}
-            <div className="lg:col-span-2">
+            <ScrollReveal direction="left" className="lg:col-span-2 text-center lg:text-left">
               <h1 className="text-4xl font-extrabold text-charcoal sm:text-5xl leading-tight">
-                Need Common{" "}
+                Common{" "}
                 <span className="text-brand-red">Questions</span>
               </h1>
               <p className="mt-4 text-lg text-muted leading-relaxed">
                 Find the answer to frequently asked questions here.
               </p>
 
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-brand-blue">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
@@ -43,12 +44,12 @@ export default function FAQPage() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Right: FAQ Accordion cards */}
-            <div className="lg:col-span-3">
+            <ScrollReveal direction="right" className="lg:col-span-3">
               <FAQAccordion items={faqs} variant="cards" />
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

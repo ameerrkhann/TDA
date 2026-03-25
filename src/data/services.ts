@@ -52,7 +52,7 @@ export const repairServices: RepairService[] = [
     title: "Refrigerator Repair",
     metaTitle: "Refrigerator Repair",
     metaDescription:
-      "Professional refrigerator repair for all major brands. Not cooling, leaking, or making noise? Call Top Digital Appliances at 718-234-4111.",
+      "Professional refrigerator repair for all major brands. Not cooling, leaking, or making noise? Call Top Digital Appliances at 718-234-5111.",
     intro:
       "A malfunctioning refrigerator can put your food at risk and disrupt your daily routine. Our technicians diagnose and repair refrigerators from all major brands, including built-in, French door, side-by-side, and top-freezer models. Whether the issue is temperature control, a faulty compressor, or a leaking water line, we work quickly to get your unit back to full performance.",
     commonIssues: [
@@ -73,7 +73,7 @@ export const repairServices: RepairService[] = [
     title: "Freezer Repair",
     metaTitle: "Freezer Repair",
     metaDescription:
-      "Expert freezer repair for chest, upright, and built-in freezers. Call Top Digital Appliances at 718-234-4111.",
+      "Expert freezer repair for chest, upright, and built-in freezers. Call Top Digital Appliances at 718-234-5111.",
     intro:
       "A freezer that stops working properly can lead to spoiled food and expensive waste. We repair all types of freezers — chest, upright, drawer, and built-in units — across every major brand. From temperature issues to defrost system failures, our technicians identify the root cause and get your freezer running reliably again.",
     commonIssues: [
@@ -94,7 +94,7 @@ export const repairServices: RepairService[] = [
     title: "Washer Repair",
     metaTitle: "Washer Repair",
     metaDescription:
-      "Professional washing machine repair for top-load and front-load washers. Call Top Digital Appliances at 718-234-4111.",
+      "Professional washing machine repair for top-load and front-load washers. Call Top Digital Appliances at 718-234-5111.",
     intro:
       "A broken washer means laundry piles up fast. We service all types of washing machines — top-load, front-load, and stackable units — from every major brand. Whether your washer won't drain, is vibrating excessively, or has stopped mid-cycle, our technicians will get it running smoothly again.",
     commonIssues: [
@@ -115,7 +115,7 @@ export const repairServices: RepairService[] = [
     title: "Dryer Repair",
     metaTitle: "Dryer Repair",
     metaDescription:
-      "Fast dryer repair for gas and electric dryers. Not heating or tumbling? Call Top Digital Appliances at 718-234-4111.",
+      "Fast dryer repair for gas and electric dryers. Not heating or tumbling? Call Top Digital Appliances at 718-234-5111.",
     intro:
       "When your dryer stops heating or tumbling, laundry comes to a halt. We repair both gas and electric dryers across all major brands, addressing everything from heating element failures to drum and belt issues. Our technicians bring the experience needed to diagnose the problem accurately and fix it the first time.",
     commonIssues: [
@@ -136,7 +136,7 @@ export const repairServices: RepairService[] = [
     title: "Dishwasher Repair",
     metaTitle: "Dishwasher Repair",
     metaDescription:
-      "Dishwasher not cleaning or draining? Professional dishwasher repair from Top Digital Appliances. Call 718-234-4111.",
+      "Dishwasher not cleaning or draining? Professional dishwasher repair from Top Digital Appliances. Call 718-234-5111.",
     intro:
       "A dishwasher that doesn't clean properly or won't drain creates more work in the kitchen. We repair all dishwasher types — built-in, portable, and drawer models — from every major brand. Whether the issue is poor cleaning performance, drainage problems, or a door that won't latch, we'll find the cause and fix it.",
     commonIssues: [
@@ -157,7 +157,7 @@ export const repairServices: RepairService[] = [
     title: "Oven Repair",
     metaTitle: "Oven Repair",
     metaDescription:
-      "Professional oven repair for gas and electric ovens. Not heating evenly? Call Top Digital Appliances at 718-234-4111.",
+      "Professional oven repair for gas and electric ovens. Not heating evenly? Call Top Digital Appliances at 718-234-5111.",
     intro:
       "An oven that won't heat evenly or doesn't reach the right temperature can make cooking unreliable. We repair gas, electric, convection, and wall ovens from all major brands. From igniter and element replacements to thermostat calibration, our technicians restore your oven to full working order.",
     commonIssues: [
@@ -178,7 +178,7 @@ export const repairServices: RepairService[] = [
     title: "Stove Repair",
     metaTitle: "Stove Repair",
     metaDescription:
-      "Expert stove repair for gas and electric stovetops. Burner not lighting? Call Top Digital Appliances at 718-234-4111.",
+      "Expert stove repair for gas and electric stovetops. Burner not lighting? Call Top Digital Appliances at 718-234-5111.",
     intro:
       "A stove that won't ignite or heat properly makes meal preparation difficult. We repair gas, electric, and induction stovetops from all major brands. Whether a burner won't light, a heating element has failed, or there is an issue with the gas supply, our technicians will diagnose and resolve the problem efficiently.",
     commonIssues: [
@@ -199,7 +199,7 @@ export const repairServices: RepairService[] = [
     title: "Range Repair",
     metaTitle: "Range Repair",
     metaDescription:
-      "Professional range repair for gas, electric, and dual-fuel ranges. Call Top Digital Appliances at 718-234-4111.",
+      "Professional range repair for gas, electric, and dual-fuel ranges. Call Top Digital Appliances at 718-234-5111.",
     intro:
       "A range combines your stovetop and oven into one unit, and when either side has a problem it affects your entire kitchen workflow. We repair gas, electric, and dual-fuel ranges from all major brands. Whether the issue is with the burners, the oven cavity, or the control board, we handle it all.",
     commonIssues: [
@@ -220,7 +220,7 @@ export const repairServices: RepairService[] = [
     title: "Microwave Repair",
     metaTitle: "Microwave Repair",
     metaDescription:
-      "Microwave not heating or turning on? Professional microwave repair from Top Digital Appliances. Call 718-234-4111.",
+      "Microwave not heating or turning on? Professional microwave repair from Top Digital Appliances. Call 718-234-5111.",
     intro:
       "A microwave that won't heat, sparks during use, or has a broken turntable is more than an inconvenience — it can be a safety concern. We repair countertop, over-the-range, and built-in microwaves from all major brands. Our technicians address everything from magnetron failures to control board issues.",
     commonIssues: [

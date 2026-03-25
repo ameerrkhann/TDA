@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Top Digital Appliances",
   },
   description:
-    "Professional appliance repair, installation, and parts support for all major brands. Serving the Greater Hudson Valley area and beyond. Call 718-234-4111.",
+    "Professional appliance repair, installation, and parts support for all major brands. Serving the Greater Hudson Valley area and beyond. Call 718-234-5111.",
   openGraph: {
     type: "website",
     siteName: "Top Digital Appliances",

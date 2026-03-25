@@ -82,13 +82,13 @@ export default function WhyChooseUs() {
       <div className="relative mx-auto max-w-6xl">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* ── Left: Text content ── */}
-          <div>
+          <div className="text-center lg:text-left">
             <div className="mb-3 inline-flex h-1 w-12 rounded-full bg-brand-red" />
             <h2 className="text-3xl font-extrabold text-charcoal sm:text-4xl lg:text-5xl leading-tight">
               Why Choose{" "}
               <span className="text-brand-blue">Us</span>
             </h2>
-            <p className="mt-4 text-lg text-muted max-w-md leading-relaxed">
+            <p className="mt-4 text-lg text-muted max-w-md mx-auto lg:mx-0 leading-relaxed">
               Trusted by homeowners, landlords, and property managers across the Greater Hudson Valley.
             </p>
 
@@ -132,8 +132,8 @@ export default function WhyChooseUs() {
                 }}
               >
                 <Image
-                  src="/dryer-drum-macro-stainless-texture-warm-reflections.jpg"
-                  alt="Washing machine drum with clothes"
+                  src="/photo-1626806787461-102c1bfaaea1.jpeg"
+                  alt="Washing machine drum close-up"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 440px"
